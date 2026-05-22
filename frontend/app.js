@@ -3,7 +3,7 @@
    Change WS_URL to your Render backend URL after deploy.
 ───────────────────────────────────────────────────────────────────────────── */
 
-const WS_URL = (location.hostname === "localhost" || location.hostname === "127.0.0.1")
+const WS_URL = "wss://fafaw-production.up.railway.app/ws";
   ? "ws://localhost:8000/ws"
   : `wss://${location.hostname.replace("fafaw", "fafaw-api")}.onrender.com/ws`;
 // ↑ After deploy, replace the whole line with: const WS_URL = "wss://YOUR-RENDER-URL.onrender.com/ws";
