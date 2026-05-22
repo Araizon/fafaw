@@ -4,10 +4,6 @@
 ───────────────────────────────────────────────────────────────────────────── */
 
 const WS_URL = "wss://fafaw-production.up.railway.app/ws";
-  ? "ws://localhost:8000/ws"
-  : `wss://${location.hostname.replace("fafaw", "fafaw-api")}.onrender.com/ws`;
-// ↑ After deploy, replace the whole line with: const WS_URL = "wss://YOUR-RENDER-URL.onrender.com/ws";
-
 // ─── State ────────────────────────────────────────────────────────────────────
 let ws = null;
 let agents = {};        // { name: { emoji, color, offline } }
