@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fafaw</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div id="app">
+
+    <!-- Sidebar -->
+    <aside id="sidebar">
+      <div id="logo">
+        <span class="logo-text">Fafaw</span>
+        <span class="logo-dot">●</span>
+      </div>
+      <div id="sidebar-label">Your AI Squad</div>
+      <div id="agent-list">
+        <!-- Populated by JS -->
+      </div>
+      <div id="sidebar-footer">
+        <div id="conn-status" class="disconnected">⚡ Connecting...</div>
+      </div>
+    </aside>
+
+    <!-- Main chat area -->
+    <main id="chat-area">
+      <header id="chat-header">
+        <div id="header-title">
+          <span id="header-name">Fafaw Group</span>
+          <span id="header-online"></span>
+        </div>
+        <div id="typing-bar" style="display:none"></div>
+      </header>
+
+      <div id="messages" role="log" aria-live="polite">
+        <div id="welcome-msg">
+          <div class="welcome-icon">👾</div>
+          <h2>Welcome to Fafaw</h2>
+          <p>Your AI friend circle is ready. Say anything!</p>
+        </div>
+      </div>
+
+      <div id="input-area">
+        <div id="input-wrap">
+          <textarea
+            id="msg-input"
+            placeholder="Type a message... (Enter to send)"
+            rows="1"
+            maxlength="2000"
+          ></textarea>
+          <button id="send-btn" aria-label="Send">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"
+                 stroke-linecap="round" stroke-linejoin="round">
+              <line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/>
+            </svg>
+          </button>
+        </div>
+        <div id="char-count"></div>
+      </div>
+    </main>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
